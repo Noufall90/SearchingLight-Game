@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Text
-  - 
+  - Effect
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: obstacle
     uniqueID: 3290952667
+    locked: 0
+  - name: Foreground
+    uniqueID: 1600763717
     locked: 0
