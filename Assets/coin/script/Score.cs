@@ -16,10 +16,11 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Coins")) // Compare tag of the collided object
+        if (other.gameObject.CompareTag("Coins")) // Bandingkan tag objek yang bertabrakan
         {
             ScoreNum += 1;
-            Destroy(other.gameObject); // Destroy the collided coin
+            // Anda tidak perlu menghancurkan objek, cukup nonaktifkan saja
+            other.gameObject.SetActive(false);
             UpdateScoreText();
         }
     }
