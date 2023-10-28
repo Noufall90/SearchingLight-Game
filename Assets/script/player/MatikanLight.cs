@@ -42,8 +42,9 @@ public class MatikanLight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Cek apakah objek yang menabrak memiliki komponen Collider2D
-        if (other.GetComponent<Collider2D>() != null)
+        // Cek apakah objek yang menabrak memiliki komponen CircleCollider2D
+        CircleCollider2D circleCollider = other.GetComponent<CircleCollider2D>();
+        if (circleCollider != null)
         {
             // Hidupkan kembali cahaya dan reset waktu
             light2D.enabled = true;
