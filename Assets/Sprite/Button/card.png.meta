@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -165,11 +165,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD:Assets/Sprite/Button/card.png.meta
       card_0: 5189691121816951081
-=======
-      pngjoy.com_rounded-rectangle-platter-hd-png-download_1944167_0: 5163147642777639514
->>>>>>> f08c28a694bd2f7a0935aa9a23c99f4b9ba7f006:Assets/Sprite/Button/pngjoy.com_rounded-rectangle-platter-hd-png-download_1944167.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
