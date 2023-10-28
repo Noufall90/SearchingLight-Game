@@ -6,7 +6,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI MyscoreText;
-    private int ScoreNum;
+    public static int ScoreNum;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
         }
     }
 
-    void UpdateScoreText()
+    public void UpdateScoreText()
     {
         MyscoreText.text = "Light Collect: " + ScoreNum;
     }
