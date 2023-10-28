@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngjoy.com_rounded-rectangle-platter-hd-png-download_1944167_0: 5163147642777639514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
