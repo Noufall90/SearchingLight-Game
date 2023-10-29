@@ -4,22 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MoveToNextLevel : MonoBehaviour
 {
-    public int nextSceneLoad;
-    // Start is called before the first frame update
-    void Start()
+  public int nextSceneLoad;
+  // Start is called before the first frame update
+  void Start()
+  {
+    nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+  }
+
+  public void OnTriggerEnter2D(Collider2D other)
+  {
+    if (Score.ScoreNum == 2)
     {
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+
+      if (other.gameObject.tag == "Player")
+      {
+        SceneController.instance.NextLevel();
+      }
     }
-    
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-      if (Score.ScoreNum == 2){
-      
-        if (other.gameObject.tag == "Player")
-        {
-           SceneController.instance.NextLevel(); 
-        }
-      } 
-    }
-    
+  }
+
 }
