@@ -666,8 +666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Made by : PixelStrom
-
+  m_text: '
 
 
     Naufal
@@ -687,27 +686,7 @@ MonoBehaviour:
     Pahril
 
     Zaky
-    Dio
-
-
-
-
-    by JDSherber
-
-
-    by Cainos
-
-
-    by Luke The Police
-
-
-    by greatdocbrown
-
-
-    by
-    Luck
-
-'
+    Dio'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -979,10 +958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-
-    Credits
+  m_text: 'Credits
 
 
     Leader
@@ -994,33 +970,7 @@ MonoBehaviour:
     Narative Designer
 
 
-    Programmer
-
-
-
-
-    Assets
-
-
-    Audio
-
-
-    Tilesmap
-
-
-    Character
-
-
-
-    Coins
-
-
-
-    Icon
-
-
-    copyright
-    based on internet'
+    Programmer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
