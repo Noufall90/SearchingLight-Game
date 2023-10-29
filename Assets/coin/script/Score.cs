@@ -27,6 +27,6 @@ public class Score : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        MyscoreText.text = "Light Collect: " + ScoreNum;
+        MyscoreText.text = "Light Collect: " + ScoreNum +" /15";
     }
 }
