@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class movement : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class movement : MonoBehaviour
     public float sprintMultiplier = 1.4f; // The multiplier for sprint speed (40% faster)
     new public Rigidbody2D rigidbody; // Use the 'new' keyword to hide the inherited member
     private Vector2 moveDirection;
+    public Animator anim;
+
 
     private Stamina staminaScript; // Reference to the Stamina script
     private bool isSprinting = false; // Keep track of sprinting state
+    private bool moving;
 
     public ParticleSystem dust;
 
@@ -24,6 +28,7 @@ public class movement : MonoBehaviour
     void Update()
     {
         ProcessInput();
+        Animate();
     }
 
     void FixedUpdate()
@@ -69,4 +74,28 @@ public class movement : MonoBehaviour
     {
         dust.Play();
     }
+   private void Animate()
+{
+    float x = moveDirection.x;
+    float y = moveDirection.y;
+
+    if (moveDirection.magnitude > 0.1f || moveDirection.magnitude < -0.1f)
+    {
+        moving = true;
+    }
+    else
+    {
+        moving = false;
+    }
+    
+    if (moving)
+    {
+        anim.SetFloat("X", x);
+        anim.SetFloat("Y", y);
+    }
+    
+    anim.SetBool("Moving", moving);
+}
+
+
 }
