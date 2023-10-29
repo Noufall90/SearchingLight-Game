@@ -13,7 +13,7 @@ public class MoveToNextLevel : MonoBehaviour
 
   public void OnTriggerEnter2D(Collider2D other)
   {
-    if (Score.ScoreNum == 2)
+    if (Score.ScoreNum == 12)
     {
 
       if (other.gameObject.tag == "Player")

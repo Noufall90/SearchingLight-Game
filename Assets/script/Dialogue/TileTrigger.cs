@@ -5,7 +5,7 @@ using UnityEngine;
 public class TileTrigger : MonoBehaviour
 {
   public GameObject dialogToShow; // Tambahkan dialog yang sesuai di Inspector
-  public float dialogDuration = 5f; // Atur durasi tampilan dialog
+  public float dialogDuration = 7f; // Atur durasi tampilan dialog
 
   private bool dialogActive = false;
 
