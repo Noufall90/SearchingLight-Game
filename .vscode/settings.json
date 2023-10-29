@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Searching-Light-New.sln"
+    "dotnet.defaultSolution": "Searching-Light.sln"
 }
