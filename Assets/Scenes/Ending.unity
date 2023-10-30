@@ -273,12 +273,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -293,15 +293,15 @@ Canvas:
   m_GameObject: {fileID: 484310453}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1511251125}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -358,7 +358,7 @@ RectTransform:
   m_GameObject: {fileID: 713281824}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 113.53651}
-  m_LocalScale: {x: 0.07879, y: 0.07879, z: 0.07879}
+  m_LocalScale: {x: 0.20923702, y: 0.24983525, z: 0.24983525}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 484310457}
@@ -366,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -185}
+  m_AnchoredPosition: {x: 703, y: 385}
   m_SizeDelta: {x: 541.7776, y: 304.7499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713281826
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e7be785e30c65d4b87199b63990d404, type: 3}
+  m_Sprite: {fileID: -3119695713916645804, guid: 94ade70a385151f4ab25689cb64545ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
