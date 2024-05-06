@@ -13,6 +13,9 @@ public class FollowPlayerLight : MonoBehaviour
         {
             // Mengatur posisi cahaya berdasarkan posisi pemain dengan offset tinggi
             transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + lightHeightOffset, playerTransform.position.z);
+
+            // Menghadap ke arah pemain
+            transform.LookAt(playerTransform);
         }
     }
 }
