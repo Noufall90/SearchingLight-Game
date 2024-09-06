@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Text
   - Effect
-  - 
+  - Player
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: obstacle
     uniqueID: 3290952667
+    locked: 0
+  - name: Player
+    uniqueID: 349446625
     locked: 0
   - name: Foreground
     uniqueID: 1600763717

@@ -3,11 +3,11 @@ using UnityEngine;
 public class MatikanLight : MonoBehaviour
 {
     private UnityEngine.Rendering.Universal.Light2D light2D;
-    private float waktuMenunggu = 20f; // Menunggu selama 10 detik
+    private float waktuMenunggu = 15f;
     private float waktuSekarang = 0f;
     private bool sudahDimatikan = false;
     private float intensitasAwal;
-    private float intensitasMinimum = 0.1f; // Intensitas minimum yang Anda inginkan
+    private float intensitasMinimum = 0.1f;
 
     void Start()
     {
@@ -42,11 +42,9 @@ public class MatikanLight : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Cek apakah objek yang menabrak memiliki komponen CircleCollider2D
         CircleCollider2D circleCollider = other.GetComponent<CircleCollider2D>();
         if (circleCollider != null)
         {
-            // Hidupkan kembali cahaya dan reset waktu
             light2D.enabled = true;
             sudahDimatikan = false;
             waktuSekarang = 0f;

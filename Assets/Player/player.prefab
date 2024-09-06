@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &633882421298689349
 SpriteRenderer:
@@ -166,3 +166,5 @@ MonoBehaviour:
   moveSpeed: 5
   sprintMultiplier: 1.5
   rigidbody: {fileID: 6952964333849410413}
+  anim: {fileID: 0}
+  dust: {fileID: 0}

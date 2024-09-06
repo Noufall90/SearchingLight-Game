@@ -6,22 +6,19 @@ using UnityEngine.Tilemaps;
 public class movement : MonoBehaviour
 {
     public float moveSpeed;
-    public float sprintMultiplier = 1.4f; // The multiplier for sprint speed (40% faster)
-    new public Rigidbody2D rigidbody; // Use the 'new' keyword to hide the inherited member
+    public float sprintMultiplier = 1.4f; 
+    new public Rigidbody2D rigidbody; 
     private Vector2 moveDirection;
     public Animator anim;
-
-
-    private Stamina staminaScript; // Reference to the Stamina script
-    private bool isSprinting = false; // Keep track of sprinting state
+    private Stamina staminaScript; 
+    private bool isSprinting = false; 
     private bool moving;
 
     public ParticleSystem dust;
 
-    // Start is called before the first frame update
     void Start()
     {
-        staminaScript = GetComponent<Stamina>(); // Get the Stamina script component
+        staminaScript = GetComponent<Stamina>(); 
     }
 
     // Update is called once per frame
@@ -43,12 +40,9 @@ public class movement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
-        // Allow sprinting only if stamina is above a threshold and player holds Shift
         if (staminaScript.stamina > (staminaScript.maxStamina * 0.2f) && (Input.GetKey(KeyCode.LeftShift)))
         {
             isSprinting = true;
-
-            // Call CrateDust() to create dust particles when Shift is pressed
             CrateDust();
         }
         else
@@ -61,7 +55,6 @@ public class movement : MonoBehaviour
     {
         float currentMoveSpeed = moveSpeed;
 
-        // Apply sprinting multiplier if sprinting is allowed
         if (isSprinting)
         {
             currentMoveSpeed *= sprintMultiplier;
@@ -74,28 +67,26 @@ public class movement : MonoBehaviour
     {
         dust.Play();
     }
-   private void Animate()
-{
-    float x = moveDirection.x;
-    float y = moveDirection.y;
-
-    if (moveDirection.magnitude > 0.1f || moveDirection.magnitude < -0.1f)
+    private void Animate()
     {
-        moving = true;
-    }
-    else
-    {
-        moving = false;
-    }
+        float x = moveDirection.x;
+        float y = moveDirection.y;
+        
+        if (moveDirection.magnitude > 0.1f || moveDirection.magnitude < -0.1f)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
     
-    if (moving)
-    {
-        anim.SetFloat("X", x);
-        anim.SetFloat("Y", y);
-    }
+        if (moving)
+        {
+            anim.SetFloat("X", x);
+            anim.SetFloat("Y", y);
+        }
     
     anim.SetBool("Moving", moving);
 }
-
-
 }
