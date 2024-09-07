@@ -23,7 +23,6 @@ public class Obstacle : MonoBehaviour, IComparable<Obstacle>
         return 0;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         MySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,11 +40,5 @@ public class Obstacle : MonoBehaviour, IComparable<Obstacle>
     public void FadedIn()
     {
         MySpriteRenderer.color = defaultColor;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

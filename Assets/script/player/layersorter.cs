@@ -29,9 +29,9 @@ public class LayerSorter : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             Obstacle o = collision.GetComponent<Obstacle>();
-            o.FadedOut();
             if (o != null)
             {
+                o.FadedOut();
                 if (obstacles.Count == 0 || o.MySpriteRenderer.sortingOrder - 1 < parentRenderer.sortingOrder)
                 {
                     parentRenderer.sortingOrder = o.MySpriteRenderer.sortingOrder - 1;
@@ -46,9 +46,9 @@ public class LayerSorter : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             Obstacle o = collision.GetComponent<Obstacle>();
-            o.FadedIn();
             if (o != null)
             {
+                o.FadedIn();
                 obstacles.Remove(o);
                 if (obstacles.Count == 0)
                 {
@@ -56,7 +56,7 @@ public class LayerSorter : MonoBehaviour
                 }
                 else
                 {
-                    obstacles.Sort();
+                    obstacles.Sort((a, b) => a.MySpriteRenderer.sortingOrder.CompareTo(b.MySpriteRenderer.sortingOrder));
                     parentRenderer.sortingOrder = obstacles[0].MySpriteRenderer.sortingOrder - 1;
                 }
             }

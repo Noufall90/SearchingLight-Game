@@ -12,13 +12,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Object
   - Water
   - UI
   - Text
   - Effect
   - Player
-  - 
+  - Foreground
   - 
   - 
   - 
@@ -51,11 +51,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: top
-    uniqueID: 2741546389
-    locked: 0
   - name: obstacle
     uniqueID: 3290952667
+    locked: 0
+  - name: top
+    uniqueID: 2741546389
     locked: 0
   - name: Player
     uniqueID: 349446625
