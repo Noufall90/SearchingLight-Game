@@ -5,6 +5,6 @@ public class Play : MonoBehaviour
 {
     public void LoadScene()
     {
-        SceneManager.LoadScene("LevelMenu");
+        SceneManager.LoadScene("Level0");
     }
 }

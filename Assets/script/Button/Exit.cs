@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
     public void QuitGame()
     {
+        Debug.Log("Game is exiting...");
         Application.Quit();
     }
 
     public void SaveGame()
     {
-        // Implementasi logika penyimpanan permainan di sini
-        // Contoh: menyimpan data ke PlayerPrefs
+        Debug.Log("Game is saving...");
         PlayerPrefs.Save();
     }
 }
