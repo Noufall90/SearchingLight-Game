@@ -15631,7 +15631,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.36862746, g: 0.11191314, b: 0.07843137, a: 1}
+      maxColor: {r: 0.07843137, g: 0.36862746, b: 0.12867385, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -45239,7 +45239,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.31866184, g: 0.36862746, b: 0.07843137, a: 1}
+      maxColor: {r: 0.20363612, g: 0.36862746, b: 0.07843137, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -54706,7 +54706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 343, y: 278}
+  m_AnchoredPosition: {x: 343, y: 270}
   m_SizeDelta: {x: 541.7776, y: 304.7499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765783921

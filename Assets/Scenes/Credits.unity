@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits\n\nMade by \n\nLeader\n\nGame Designer\n\n\nNarative Designer\n\nProgrammer\n\n\n\nAssets\n\nAudio\n\nTilesmap\n\nCharacter\n\nCoins\n\nIcon\n\ncopyright
+  m_text: "Credits\n\nMade by \n\nLeader\n\nGame Designer\n\n\nNarative Designer\n\nProgrammer\n\n\n\nAssets\n\nAudio\n\nTilesmap\n\nCharacter\n\nCoins\n\ncopyright
     based on internet"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d91c2a2dc66486468d0d0e338e550f0, type: 2}
