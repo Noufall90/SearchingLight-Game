@@ -3,7 +3,7 @@ using UnityEngine;
 public class MatikanLight : MonoBehaviour
 {
     private UnityEngine.Rendering.Universal.Light2D light2D;
-    private float waktuMenunggu = 15f;
+    public float waktuMenunggu = 15f;
     private float waktuSekarang = 0f;
     private bool sudahDimatikan = false;
     private float intensitasAwal;
