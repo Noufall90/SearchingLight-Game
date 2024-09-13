@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Coins
-  - Next
   - Dialog
+  - Massage
   layers:
   - Default
   - TransparentFX
