@@ -5,26 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-  public static SceneController instance;
+public static SceneController instance;
+void Awake() {
+    // Check if the object has a parent
+    if (transform.parent == null) {
+        DontDestroyOnLoad(gameObject);
+    } else {
+        // Detach the object from its parent
+        transform.parent = null;
+        DontDestroyOnLoad(gameObject);
+    }
+}
 
-  private void Awake()
+  public void NextLevel()
   {
-    if (instance == null)
-    {
-      instance = this;
-      DontDestroyOnLoad(gameObject);
-    }
-    else
-    {
-      Destroy(gameObject);
-    }
+    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
   }
-   public void NextLevel()
-   {
-     SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-   }
-   public void LoadScene(string sceneName)
-   {
-     SceneManager.LoadSceneAsync(sceneName);
-   }
+  public void LoadScene(string sceneName)
+  {
+    SceneManager.LoadSceneAsync(sceneName);
+  }
 }

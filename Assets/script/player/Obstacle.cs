@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour, IComparable<Obstacle>
         {
             return 1;
         }
-        else if (MySpriteRenderer.sortingOrder < other.MySpriteRenderer.sortingOrder) // Fixed the condition here
+        else if (MySpriteRenderer.sortingOrder < other.MySpriteRenderer.sortingOrder) 
         {
             return -1;
         }

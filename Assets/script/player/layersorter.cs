@@ -26,11 +26,13 @@ public class LayerSorter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger entered with: " + collision.name);
         if (collision.CompareTag("Obstacle"))
         {
             Obstacle o = collision.GetComponent<Obstacle>();
             if (o != null)
             {
+                Debug.Log("Obstacle found: " + o.name);
                 o.FadedOut();
                 if (obstacles.Count == 0 || o.MySpriteRenderer.sortingOrder - 1 < parentRenderer.sortingOrder)
                 {
