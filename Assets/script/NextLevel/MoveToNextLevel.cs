@@ -2,25 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class MoveToNextLevel : MonoBehaviour
 {
-  public int nextSceneLoad;
-  // Start is called before the first frame update
-  void Start()
-  {
-    nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
-  }
+    public string nextSceneName;
+    private Score scoreManager; 
 
-  public void OnTriggerEnter2D(Collider2D other)
-  {
-    if (Score.ScoreNum == 15)
+    void Start()
     {
-
-      if (other.gameObject.tag == "Player")
-      {
-        SceneController.instance.NextLevel();
-      }
+        scoreManager = Object.FindFirstObjectByType<Score>();
     }
-  }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (scoreManager != null && scoreManager.ScoreNum >= scoreManager.maxScore) 
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                if (!string.IsNullOrEmpty(nextSceneName)) 
+                {
+                    SceneManager.LoadScene(nextSceneName); 
+                }
+                else
+                {
+                    Debug.LogWarning("Nama scene tidak ditentukan.");
+                }
+            }
+        }
+    }
 }

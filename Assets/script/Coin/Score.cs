@@ -6,27 +6,26 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI MyscoreText;
-    public static int ScoreNum;
+    public int ScoreNum;
+    public int maxScore;
 
     void Start()
     {
-        ScoreNum = 0;
-        UpdateScoreText();
+        UpdateScoreText(); 
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Coins")) // Bandingkan tag objek yang bertabrakan
+        if (other.gameObject.CompareTag("Coins")) 
         {
-            ScoreNum += 1;
-            // Anda tidak perlu menghancurkan objek, cukup nonaktifkan saja
+            ScoreNum += 1; 
             other.gameObject.SetActive(false);
-            UpdateScoreText();
+            UpdateScoreText(); 
         }
     }
 
     public void UpdateScoreText()
     {
-        MyscoreText.text = "Light Collect: " + ScoreNum +" /15";
+        MyscoreText.text = "Light Collect: " + ScoreNum + " / " + maxScore;
     }
 }
