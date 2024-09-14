@@ -22,11 +22,13 @@ public class movement : MonoBehaviour
     public AudioSource audioSource; 
     public AudioClip walkSound;
 
+    public Score scoreScript; // Referensi ke script Score
+
     void Start()
     {
         staminaScript = GetComponent<Stamina>(); 
         audioSource = GetComponent<AudioSource>(); 
-        KBCounter = 0; // Initialize KBCounter to 0
+        KBCounter = 0; 
     }
 
     void Update()
@@ -39,12 +41,10 @@ public class movement : MonoBehaviour
     {
         if (KBCounter <= 0)
         {
-            // Move normally if not in knockback
             Move();
         }
         else
         {
-            // Apply knockback force
             if (KnockFromRight)
             {
                 rigidbody.velocity = new Vector2(-KBForce, KBForce);
@@ -53,7 +53,14 @@ public class movement : MonoBehaviour
             {
                 rigidbody.velocity = new Vector2(KBForce, KBForce);
             }
-            KBCounter -= Time.deltaTime; // Decrease knockback timer
+            KBCounter -= Time.deltaTime; 
+            if (KBCounter <= 0)
+            {
+                // Respawn coin yang terakhir diambil dan kurangi skor
+                scoreScript.RespawnLastCollectedCoin();
+                scoreScript.ScoreNum = Mathf.Max(scoreScript.ScoreNum - 1, 0); // Kurangi skor dan pastikan tidak kurang dari 0
+                scoreScript.UpdateScoreText();
+            }
         }
     }
 
