@@ -25,10 +25,14 @@ public class Score : MonoBehaviour
             return;
         }
 
-        lastCollectedCoin = other.gameObject; // Simpan coin yang diambil
-        ScoreNum += 1; 
-        other.gameObject.SetActive(false);
-        UpdateScoreText(); 
+        // Pastikan hanya coin yang diambil
+        if (System.Array.Exists(coins, coin => coin == other.gameObject))
+        {
+            lastCollectedCoin = other.gameObject; // Simpan coin yang diambil
+            ScoreNum += 1; 
+            other.gameObject.SetActive(false);
+            UpdateScoreText(); 
+        }
     }
 
     public void UpdateScoreText()

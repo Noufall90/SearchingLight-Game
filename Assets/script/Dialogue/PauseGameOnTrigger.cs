@@ -37,14 +37,14 @@ public class PauseGameOnTrigger : MonoBehaviour
         Time.timeScale = 1f;
         pausePanel.SetActive(false);
 
-        if (gameObject.activeInHierarchy) // Ensure the object is active
+        if (isCooldown)
         {
-            StartCoroutine(StartCooldown());
+            Debug.LogWarning("Cooldown is already active. Coroutine will not start.");
+            return;
         }
-        else
-        {
-            Debug.LogWarning("GameObject is inactive. Coroutine will not start.");
-        }
+
+        // Start the cooldown process
+        StartCoroutine(StartCooldown());
     }
 
     IEnumerator StartCooldown()

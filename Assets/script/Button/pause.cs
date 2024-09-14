@@ -22,7 +22,7 @@ public class Pause : MonoBehaviour
     public void Keluar()
 {
     Time.timeScale = 1f;
-    SceneManager.LoadScene("LevelMenu"); // Menggunakan nama scene "room" untuk memuatnya
+    SceneManager.LoadScene("Menu"); // Menggunakan nama scene "room" untuk memuatnya
 }
 
 }
