@@ -8,6 +8,7 @@ TagManager:
   - Coins
   - Dialog
   - Massage
+  - Enemy
   layers:
   - Default
   - TransparentFX

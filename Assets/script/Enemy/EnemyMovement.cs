@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateTargetDirection();
-        SetVelocity();
+        MoveTowardsTarget();
     }
 
     private void UpdateTargetDirection()
@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void SetVelocity()
+    private void MoveTowardsTarget()
     {
         if (_targetDirection == Vector2.zero)
         {
@@ -43,6 +43,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            // Pastikan arah musuh menuju ke target
             _rigidbody.velocity = _targetDirection * _speed;
         }
     }

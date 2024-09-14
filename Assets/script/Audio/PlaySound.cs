@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaySound : MonoBehaviour
 {
     private AudioSource source;
-    private Collider2D soundTrigger;
+    public Collider2D soundTrigger;
 
     void Awake()
     {

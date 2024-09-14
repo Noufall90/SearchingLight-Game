@@ -9,42 +9,28 @@ public class PlayerAwarenessController : MonoBehaviour
     public Vector2 DirectionToPlayer { get; private set; }
 
     [SerializeField]
+    private float _playerAwarenessDistance;
+
     private Transform _player;
 
     private void Awake()
     {
-        if (_player == null)
-        {
-            _player = FindObjectOfType<movement>().transform; // Atau tambahkan player secara manual di Inspector
-        }
+        _player = FindObjectOfType<movement>().transform;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // Update is called once per frame
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        Vector2 enemyToPlayerVector = _player.position - transform.position;
+        DirectionToPlayer = enemyToPlayerVector.normalized;
+
+        if (enemyToPlayerVector.magnitude <= _playerAwarenessDistance)
         {
             AwareOfPlayer = true;
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            AwareOfPlayer = false;
-        }
-    }
-
-    void Update()
-    {
-        if (AwareOfPlayer)
-        {
-            Vector2 enemyToPlayerVector = _player.position - transform.position;
-            DirectionToPlayer = enemyToPlayerVector.normalized;
-        }
         else
         {
-            DirectionToPlayer = Vector2.zero;
+            AwareOfPlayer = false;
         }
     }
 }
