@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.113464326, y: 0.17860462}
+  m_Offset: {x: 0.07086742, y: 0.2637983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9858449, y: 0.25685444}
+  m_Size: {x: 1.4686091, y: 0.42724177}
   m_EdgeRadius: 0
 --- !u!1 &6470527522297068158
 GameObject:
@@ -94,7 +94,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bush
   m_TagString: Obstacle
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
@@ -105,7 +105,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6470527522297068158}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.1, y: -1.2, z: 17.61166}
   m_LocalScale: {x: 6.049552, y: 6.049552, z: 6.049552}
   m_ConstrainProportionsScale: 1
@@ -213,17 +213,17 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.21985029, y: 0.046138316}
-      - {x: -0.21713422, y: -0.029496513}
-      - {x: -0.19144244, y: -0.04576502}
-      - {x: -0.14194097, y: -0.0692425}
-      - {x: 0.026687384, y: 0.0013207197}
-      - {x: 0.15894917, y: -0.02785062}
-      - {x: 0.18930869, y: -0.027271867}
-      - {x: 0.22189419, y: -0.012280673}
-      - {x: 0.21967101, y: 0.059730574}
+      - {x: -0.20821522, y: 0.03367977}
+      - {x: -0.15861313, y: 0.039385967}
+      - {x: -0.09256989, y: 0.036309436}
+      - {x: 0.0670855, y: 0.052365404}
+      - {x: 0.15233307, y: 0.050557997}
+      - {x: 0.18782218, y: 0.032188162}
+      - {x: 0.1981102, y: 0.05089561}
+      - {x: 0.19589701, y: 0.09313524}
       - {x: 0.13170716, y: 0.15565886}
-      - {x: -0.030867666, y: 0.22535974}
-      - {x: -0.0675747, y: 0.21302488}
+      - {x: -0.022691904, y: 0.21198125}
+      - {x: -0.13000776, y: 0.16545682}
   m_UseDelaunayMesh: 0
 --- !u!114 &2611321986595965599
 MonoBehaviour:

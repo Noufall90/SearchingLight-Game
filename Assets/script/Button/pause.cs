@@ -20,9 +20,16 @@ public class Pause : MonoBehaviour
     }
 
     public void Keluar()
-{
-    Time.timeScale = 1f;
-    SceneManager.LoadScene("LevelMenu"); // Menggunakan nama scene "room" untuk memuatnya
-}
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelMenu"); // Menggunakan nama scene "LevelMenu" untuk memuatnya
+    }
 
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        // Mendapatkan nama scene saat ini dan memuat ulang scene tersebut
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+    }
 }

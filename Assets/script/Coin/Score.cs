@@ -20,13 +20,15 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Coins")) 
+        if (other.gameObject.CompareTag("Coins") && !other.gameObject.activeInHierarchy) 
         {
-            lastCollectedCoin = other.gameObject; // Simpan coin yang diambil
-            ScoreNum += 1; 
-            other.gameObject.SetActive(false);
-            UpdateScoreText(); 
+            return;
         }
+
+        lastCollectedCoin = other.gameObject; // Simpan coin yang diambil
+        ScoreNum += 1; 
+        other.gameObject.SetActive(false);
+        UpdateScoreText(); 
     }
 
     public void UpdateScoreText()

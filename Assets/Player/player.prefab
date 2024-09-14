@@ -50,9 +50,9 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248207126786025823}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -131,9 +131,14 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   rigidbody: {fileID: 6952964333849410413}
   anim: {fileID: 5370368919840788709}
+  KBForce: 5
+  KBCounter: 0.5
+  KBTotalTime: 0.5
+  KnockFromRight: 1
   dust: {fileID: 2082327306434309545}
   audioSource: {fileID: 1382333065471059456}
-  walkSound: {fileID: 0}
+  walkSound: {fileID: 8300000, guid: 44e28fcc99cfbc64c95711c8ae06af49, type: 3}
+  scoreScript: {fileID: 6786790080964384456}
 --- !u!114 &1921496157708261798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +172,17 @@ MonoBehaviour:
   MyscoreText: {fileID: 0}
   ScoreNum: 0
   maxScore: 10
+  coins:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &3158794537440657808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddd3f0bb2cf4ec4baaacdad2e499e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waktuMenunggu: 20
+  waktuMenunggu: 30
 --- !u!114 &4234195766484578452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +270,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8e74eece10661d242a26fe5ba3f467b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5762ffa88cac6294b983646c45b3dc34, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -403,7 +419,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -826,7 +842,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1210,7 +1226,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: 0.5, y: 0, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -1847,7 +1863,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.40539098, g: 1, b: 0.20188677, a: 1}
+        key0: {r: 0, g: 0.2895601, b: 0.81960785, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1856,14 +1872,14 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 18311
+        ctime1: 50501
         ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 26792
         atime1: 65535
         atime2: 0
         atime3: 0
@@ -5316,7 +5332,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5334,9 +5350,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: 349446625
+  m_SortingLayer: 3
+  m_SortingOrder: 150
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
